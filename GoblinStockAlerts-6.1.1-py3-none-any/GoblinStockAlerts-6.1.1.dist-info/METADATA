@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: GoblinStockAlerts
+Version: 6.1.1
+Summary: GoblinStockAlerts is a library for monitoring the World of Warcraft Auction House API
+Home-page: UNKNOWN
+Author: BinaryHabitat
+License: UNKNOWN
+Project-URL: Source, https://github.com/binaryhabitat/GoblinStockAlerts
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: GameAPI (<1.0,>=0.8.7)
+Requires-Dist: ruamel.yaml (<0.18,>=0.17.4)
+Requires-Dist: coloredlogs (<16.0,>=15.0)
+Requires-Dist: tabulate (==0.8.9)
+Requires-Dist: mergedeep (==1.3.4)
+Requires-Dist: SLPP (==1.2.3)
+Requires-Dist: scipy (==1.6.3)
+Requires-Dist: winotify (==1.0.4)
+
+# GoblinStockAlerts 💰🚀
+
+GoblinStockAlerts (GSA) is a **self-hosted** project for monitoring the World of Warcraft Auction House API.
+
+For the most hardcore, there is an additional (and optional) 'Sniper' addon component that will give you the ability to
+rapidly purchase the discovered items in-game.
+
+![](https://raw.githubusercontent.com/binaryhabitat/GoblinStockAlerts/main/documentation/media/banner.png)
+
+###### The quality of this logo probably says a lot.
+
+### Changelog
+
+All notable changes can be reviewed [here](https://github.com/binaryhabitat/GoblinStockAlerts/tree/main/CHANGELOG.md).
+
+### Why?
+
+Closed-source, private tools being used in a video game is anti-competitive. The skill should be in your decisions
+analyzing what is, and isn't a deal, not down to the tool you use. Some tools used by the Goblin community are giving a
+significant competitive edge to people and GSA aims to _help_ level the playing field. It doesn't solve it by any means,
+but I hope it helps. Blizzard needs to intervene, but until they do, enjoy API sniping.
+
+Additionally, GSA is aimed at bridging a gap between those who use existing services (such
+as [TradeSkillMaster](https://www.tradeskillmaster.com/) or [The Undermine Journal](https://theunderminejournal.com/))
+and those using private closed-source applications written by various Auction House Goblins 💰.
+
+This does not mean that absolutely no technical ability is needed, an amount of technical aptitude **is**
+required to set GSA up.
+
+### Cost
+
+GSA auction scanner and addon will always be open source. Because it's self-hosted, there are no cloud costs - Therefore
+it's free, now, and forever. Enjoy.
+
+### Demo
+
+Images say a thousand words, this is an example run of the main scanner component.
+
+![](https://raw.githubusercontent.com/binaryhabitat/GoblinStockAlerts/main/documentation/media/demo.gif)
+
+### Setup
+
+- Documentation (Python Scanner) [here](https://github.com/binaryhabitat/GoblinStockAlerts/tree/main/documentation/SETUP_PYTHON.md).
+- Documentation (Configurations) [here](https://github.com/binaryhabitat/GoblinStockAlerts/tree/main/documentation/SETUP_CONFIGURATION.md).
+- Documentation (Sniper Addon) [here](https://github.com/binaryhabitat/GoblinStockAlerts/tree/main/documentation/SETUP_ADDON.md).
+
+### Issues
+
+Lastly, GSA is written by people who are not Auction House Goblins 💰, TSM users, or any other type of market
+connoisseurs. When submitting issues / feature requests please ELI5 (_Explain Like I'm 5_)
+
+- GSA was originally created as a side project for 'the lazy town kid'.
+
+Due to the intended audience of GSA issues can be reported on
+Discord: [https://discord.gg/UeX7RekyUq](https://discord.gg/UeX7RekyUq).
+
+### Disclaimer
+
+Reinforcing the 'AS-IS' part of the LGPL license. You can inspect every element of the code being provided due to its
+open source nature, and therefore any decisions on how you spend your gold in World of Warcraft remain yours.
+
+___The code is not yet production quality or optimized. It is in an "it works, spaghetti" state, this will be improved
+over time - help appreciated.___
+
+### "Python absolutely sucks for concurrency!"
+
+It does, in addition this project was written in a rush. However, Python is the most widely accessible language in the
+world. Therefore, it is hoped that it is easy for others to contribute, review and improve.
+
+### The Legal Stuff
+
+#### Blizzard Entertainment
+
+- The Blizzard API Terms of Use can be
+  found [here](https://www.blizzard.com/en-us/legal/a2989b50-5f16-43b1-abec-2ae17cc09dd6/blizzard-developer-api-terms-of-use)
+  .
+- All .json and API data is sourced by official Blizzard Entertainment APIs, and as such belongs to them.
+- Blizzard Entertainment does not actively endorse this project (as with any addon).
+- All trademarks are owned by their respective owners - primarily BLIZZARD ENTERTAINMENT, INC.
+
+Source Code Copyright (C) 2021 BinaryHabitat. Released under [GNU LESSER GENERAL PUBLIC LICENSE](LICENSE).
+
+
+

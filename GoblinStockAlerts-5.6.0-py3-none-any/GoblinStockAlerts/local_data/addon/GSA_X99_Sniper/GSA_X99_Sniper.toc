@@ -1,0 +1,15 @@
+## Interface: 90100
+## Title: GSA_X99_Sniper
+## Author: Francis Schiavo
+## Notes: Companion addon for GoblinStockAlerts. Protection googles not included.
+## Version: 1.1.1.0
+## SavedVariablesPerCharacter: GSADebugEnabled,GSAExtendedDebug,GSALocked
+
+GSA_X99_Debugger.xml
+GSA_X99_Debugger.lua
+
+GSA_X99_Sniper.xml
+GSA_X99_Utils.lua
+GSA_X99_Realms.lua
+GSA_X99_Data.lua
+GSA_X99_Sniper.lua

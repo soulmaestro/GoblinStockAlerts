@@ -1,0 +1,143 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+  <Frame name="GSA" inherits="ButtonFrameTemplate" parent="UIParent" hidden="true" enableMouse="true" movable="true" frameStrata="DIALOG">
+    <Size x="450" y="185"/>
+    <Anchors>
+      <Anchor point="CENTER" relativeTo="UIParent" />
+    </Anchors>
+    <Frames>
+      <Button name="$parentMainButton" inherits="UIPanelButtonTemplate">
+        <Size x="100" y="25"/>
+        <Anchors>
+          <Anchor point="BOTTOMLEFT" y="4" x="2"/>
+        </Anchors>
+        <ButtonText text="Start"/>
+      </Button>
+      <Button name="$parentSkipButton" inherits="UIPanelButtonTemplate">
+        <Size x="100" y="25"/>
+        <Anchors>
+          <Anchor point="BOTTOMRIGHT" x="-5" y="4"/>
+        </Anchors>
+        <ButtonText text="Skip"/>
+      </Button>
+      <CheckButton name="$parentDebugButton" text="Debug information" inherits="ChatConfigCheckButtonTemplate">
+        <Size x="25" y="25" />
+        <Anchors>
+          <Anchor point="BOTTOMLEFT" relativeTo="$parentMainButton" relativePoint="BOTTOMRIGHT" />
+        </Anchors>
+      </CheckButton>
+      <Frame name="$parentItem">
+        <Anchors>
+          <Anchor point="LEFT" x="7"/>
+          <Anchor point="TOP" y="-72"/>
+          <Anchor point="RIGHT" x="-4"/>
+          <Anchor point="BOTTOM" relativeTo="$parentSkipButton" relativePoint="TOP" y="-2"/>
+        </Anchors>
+        <Layers>
+          <Layer>
+             <Texture name="$parentIcon">
+              <Size x="55" y="55"/>
+              <Anchors>
+                <Anchor point="TOPLEFT" x="5" y="5"/>
+              </Anchors>
+            </Texture>
+
+            <FontString name="$parentName" text="" inherits="SystemFont_Med2" justifyH="LEFT">
+              <Anchors>
+                <Anchor point="TOP" relativeTo="$parent" relativePoint="TOP"/>
+                <Anchor point="LEFT" relativeTo="$parentIcon" relativePoint="RIGHT" x="5"/>
+                <Anchor point="RIGHT" relativeTo="$parent" relativePoint="RIGHT" x="-10"/>
+              </Anchors>
+            </FontString>
+
+            <FontString name="$parentPurchasedAmount" text="" inherits="GameTooltipText">
+              <Size x="60"/>
+              <Anchors>
+                <Anchor point="TOPRIGHT" relativeTo="$parentName" relativePoint="BOTTOMRIGHT" x="-5" y="-12"/>
+              </Anchors>
+              <Color r="0.6" g="1.0" b="1.0"/>
+            </FontString>
+            <FontString name="$parentPurchasedAmountLabel" text="Purchased: " inherits="GameTooltipText" hidden="true">
+              <Anchors>
+                <Anchor point="RIGHT" relativeTo="$parentPurchasedAmount" relativePoint="LEFT"/>
+              </Anchors>
+            </FontString>
+
+            <FontString name="$parentDesiredQuantity" text="10000" inherits="GameTooltipText" hidden="true">
+              <Size x="60"/>
+              <Anchors>
+                <Anchor point="TOPRIGHT" relativeTo="$parentPurchasedAmount" relativePoint="BOTTOMRIGHT" y="-5"/>
+              </Anchors>
+              <Color r="0.8" g="0.75"/>
+            </FontString>
+            <FontString name="$parentDesiredQuantityLabel" text="Wanted: " inherits="GameTooltipText" hidden="true">
+              <Anchors>
+                <Anchor point="RIGHT" relativeTo="$parentDesiredQuantity" relativePoint="LEFT"/>
+              </Anchors>
+            </FontString>
+
+            <FontString name="$parentAvailable" text="10" inherits="GameTooltipText" hidden="true">
+              <Size x="60"/>
+              <Anchors>
+                <Anchor point="TOPRIGHT" relativeTo="$parentDesiredQuantity" relativePoint="BOTTOMRIGHT" y="-5"/>
+              </Anchors>
+              <Color r="0.8" g="0.75"/>
+            </FontString>
+            <FontString name="$parentAvailableLabel" text="Available: " inherits="GameTooltipText" hidden="true">
+              <Anchors>
+                <Anchor point="RIGHT" relativeTo="$parentAvailable" relativePoint="LEFT"/>
+              </Anchors>
+            </FontString>
+
+            <FontString name="$parentPricePerUnitLabel" text="Unit price: " inherits="GameTooltipText" hidden="true" justifyH="RIGHT">
+              <Size x="75"/>
+              <Anchors>
+                <Anchor point="TOPLEFT" relativeTo="$parentName" relativePoint="BOTTOMLEFT" y="-12"/>
+              </Anchors>
+            </FontString>
+            <FontString name="$parentPricePerUnit" text="200" inherits="GameTooltipText" hidden="true">
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="$parentPricePerUnitLabel" relativePoint="RIGHT"/>
+              </Anchors>
+              <Color r="0.8" g="0.75"/>
+            </FontString>
+
+            <FontString name="$parentTotalPriceLabel" text="Total price: " inherits="GameTooltipText" hidden="true" justifyH="RIGHT">
+              <Size x="75"/>
+              <Anchors>
+                <Anchor point="TOPLEFT" relativeTo="$parentPricePerUnitLabel" relativePoint="BOTTOMLEFT" y="-5"/>
+              </Anchors>
+            </FontString>
+            <FontString name="$parentTotalPrice" text="200" inherits="GameTooltipText" hidden="true">
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="$parentTotalPriceLabel" relativePoint="RIGHT"/>
+              </Anchors>
+              <Color r="0.8" g="0.75"/>
+            </FontString>
+          </Layer>
+        </Layers>
+      </Frame>
+    </Frames>
+    <Layers>
+      <Layer>
+        <FontString name="$parentRealmDisplay" text="" inherits="GameTooltipText">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parentTitleText" relativePoint="BOTTOM" y="-10"/>
+          </Anchors>
+          <Color r="0.2" g="1.0" b="0.2"/>
+        </FontString>
+
+        <FontString name="$parentAuctionIndexDisplay" text="0/0" inherits="GameTooltipText">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="$parentRealmDisplay" relativePoint="BOTTOM" y="-5"/>
+          </Anchors>
+        </FontString>
+
+        <FontString name="$parentLogLabel" text="Debug information" inherits="GameTooltipText">
+          <Anchors>
+            <Anchor point="LEFT" relativeTo="$parentDebugButton" relativePoint="RIGHT" />
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+  </Frame>
+</Ui>

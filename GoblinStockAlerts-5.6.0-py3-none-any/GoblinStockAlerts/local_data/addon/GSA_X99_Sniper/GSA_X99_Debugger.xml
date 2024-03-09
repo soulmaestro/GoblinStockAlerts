@@ -1,0 +1,62 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+  <Frame name="X99Debugger" inherits="TooltipBorderedFrameTemplate" parent="UIParent" enableMouse="true" hidden="true" frameStrata="DIALOG">
+    <Size x="400" y="300"/>
+    <Frames>
+      <ScrollingMessageFrame name="$parentConsole" parentKey="Console">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" x="7" y="-7"/>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent" x="-30" y="7"/>
+        </Anchors>
+        <Frames>
+          <Slider name="$parentScrollBar" parentKey="ScrollBar" obeyStepOnDrag="true" valueStep="1" minValue="0" maxValue="1" inherits="HybridScrollBarBackgroundTemplate">
+            <Anchors>
+              <Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPRIGHT" x="0" y="-15"/>
+              <Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOMRIGHT" x="0" y="15"/>
+            </Anchors>
+            <Frames>
+              <Button parentKey="ScrollUp" registerForClicks="LeftButtonDown" inherits="UIPanelScrollUpButtonTemplate">
+                <Anchors>
+                  <Anchor point="BOTTOM" relativePoint="TOP" x="0" y="-2"/>
+                </Anchors>
+                <Scripts>
+                  <OnClick>
+                    self:GetParent():GetParent():ScrollByAmount(3);
+                  </OnClick>
+                </Scripts>
+              </Button>
+              <Button parentKey="ScrollDown" registerForClicks="LeftButtonDown" inherits="UIPanelScrollDownButtonTemplate">
+                <Anchors>
+                  <Anchor point="TOP" relativePoint="BOTTOM" x="0" y="2"/>
+                </Anchors>
+                <Scripts>
+                  <OnClick>
+                    self:GetParent():GetParent():ScrollByAmount(-3);
+                  </OnClick>
+                </Scripts>
+              </Button>
+            </Frames>
+          </Slider>
+        </Frames>
+      </ScrollingMessageFrame>
+      <ScrollFrame parentKey="CopyBox" name="$parentCopyContainer" inherits="UIPanelScrollFrameTemplate" frameStrata="DIALOG" hidden="true">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="$parent" x="7" y="-7"/>
+          <Anchor point="BOTTOMRIGHT" relativeTo="$parent" x="-30" y="7"/>
+        </Anchors>
+        <ScrollChild>
+          <EditBox name="$parentCopyBox" parentKey="Clipboard" multiLine="true" setAllPoints="true">
+            <Size x="500" y="400"/>
+            <FontString inherits="GameFontHighlightSmall"/>
+          </EditBox>
+        </ScrollChild>
+      </ScrollFrame>
+      <Button name="$parentCopyClose" inherits="UIPanelButtonTemplate">
+        <Size x="100" y="25"/>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" />
+        </Anchors>
+        <ButtonText text="Copy"/>
+      </Button>
+    </Frames>
+  </Frame>
+</Ui>

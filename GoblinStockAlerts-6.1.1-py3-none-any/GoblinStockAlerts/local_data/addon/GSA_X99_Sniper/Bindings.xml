@@ -1,0 +1,8 @@
+<Bindings>
+  <Binding name="GSA Main Button" header="GSA X99 Sniper" description="Multipurpose action button for GSA X99 Sniper">
+    GSAMainButton:Click()
+  </Binding>
+  <Binding name="GSA Skip Button" description="Skip action button for GSA X99 Sniper">
+    GSASkipButton:Click()
+  </Binding>
+</Bindings>
