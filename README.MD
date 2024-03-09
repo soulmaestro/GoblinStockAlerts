@@ -1,4 +1,4 @@
-Copyrights and Lincenses:
+Copyrights and Licenses:
 
 GoblinStockAlerts 5.6.0 : 
 	Copyright : 
